@@ -1,0 +1,70 @@
+<div class="w3-content" style="max-width:1400px">
+  <!-- Grid -->
+  <div class="w3-row">
+
+  <!-- Blog entries -->
+  <div class="w3-col l8 s12">
+    <!-- Blog entry -->
+    <% @articles.each do |article| %>
+    <div class="w3-card-4 w3-margin w3-white">
+      <img src="<%= article.banner_image_url %>" alt="" style="width:100%" >
+      <div class="w3-container w3-padding-8">
+        <h1 id="article-title"><b><%= article.title %></b></h1>
+        <h5 id="article-info"><%= article.name %> , <span class="w3-opacity"><%= article.created_at.strftime("%B %d %Y") %></span></h5>
+      </div>
+
+      <div class="w3-container">
+        <p id="article-truncated"><%=raw article.content.truncate(323) %></p>
+        <div class="w3-row">
+          <div class="w3-col m8 s12">
+            <%= button_to "READ MORE", article, class: 'invert-button', :method => "get" %>
+          </div>
+          <div class="w3-col m4 w3-hide-small">
+            <p class="w3-right" href="#disqus_thread"><b>Comments </b> <span class="w3-tag"><script id="dsq-count-scr" src="//apexverse.disqus.com/count.js" async></script></span></p>
+          </div>
+        </div>
+      </div>
+      <br>
+    </div>
+    <% end %>
+  <!-- END BLOG ENTRIES -->
+  </div>
+
+  <!-- Introduction menu -->
+  <div class="w3-col l4">
+
+    <!-- Most Popular Posts -->
+    <div class="w3-card-2 w3-margin">
+      <div class="w3-container w3-padding">
+        <h4>Popular Articles</h4>
+      </div>
+      <ul class="w3-ul w3-hoverable w3-white">
+        <% @articles.first(5).shuffle.each do |article| %>
+        <li class="w3-padding-16">
+          <span class="w3-large"><%= link_to article.title, article%></span><br>
+          <span><%= article.created_at.strftime("%B %d %Y") %></span>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+
+
+    <!-- Labels / tags -->
+    <div class="w3-card-2 w3-margin">
+      <div class="w3-container w3-padding">
+        <h4>Tags</h4>
+      </div>
+      <div class="w3-container w3-white">
+        <p>
+          <% ActsAsTaggableOn::Tag.all.each do |tag| %>
+            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><%= link_to tag.name, articles_path(tag: tag.name) %></span>
+          <% end %>
+        </p>
+      </div>
+    </div>
+  <!-- END Introduction Menu -->
+  </div>
+  <!-- END GRID -->
+  </div><br>
+
+</div>
