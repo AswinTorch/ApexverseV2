@@ -1,14 +1,98 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Website</title>
+    <title>
+      <%= if content_for?(:title) then yield(:title) + ' | ' end %>
+      ApexVerse
+    </title>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-6906335457793789",
+        enable_page_level_ads: true
+      });
+    </script>
     <%= csrf_meta_tags %>
-
+    <%= favicon_link_tag 'favicon.ico' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//fonts.googleapis.com/css?family=Cinzel|Dancing+Script|Open+Sans|Questrial|Russo+One|Lato|Montserrat|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+    <script src="https://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <!--Nav Bar-->
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+      <div>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <%= link_to root_path, class: "navbar-brand" do %>
+            <div class="row">
+              <%= image_tag("Logo .png", :alt => "Logo", size: "50x50", :id => "nav_logo") %>
+              &nbsp;ApexVerse
+            </div>
+          <% end %>
+        </div>
+        <div class="collapse navbar-collapse" id="main-nav-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="<%= 'active' if current_page?(about_path) %>"><%= link_to "About", about_path %></li>
+            <li class="<%= 'active' if current_page?(new_contact_path) %>"><%= link_to "Contact Us", new_contact_path %></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </nav>
+
+
+    <!--Dynamic Flash Message-->
+    <div class="container">
+      <% flash.each do |type, msg| %>
+        <%= content_tag :div, msg, class: "alert alert-#{type}" %>
+      <% end %>
+    </div>
+
+    <!--Main Content-->
     <%= yield %>
+
+
+     <!--Footer -->
+    <footer class = "w3-light-grey">
+        <div class="container text-center">
+            <ul class="list-inline">
+              <li>
+                <a href="https://twitter.com/ApexVerse" target= "_blank">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/ApexVerse-1664390790528809/" target= "_blank">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                  <a href="https://www.instagram.com/ApexVerse/" target=_blank>
+                    <span class="fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a>
+              </li>
+            <p class="copyright text-muted text-align:center">Copyright <%= link_to "\u00A9", root_path %> ApexVerse 2017</p>
+          </ul>
+        </div>
+    </footer>
+
   </body>
 </html>

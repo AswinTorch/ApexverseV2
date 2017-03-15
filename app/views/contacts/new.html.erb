@@ -1,0 +1,21 @@
+<div class="container">
+    <h1 class="text-center">Contact Us</h1>
+    <div class="">
+      <%= form_for @contact do |f| %>
+        <div class="w3-row">
+          <div class="w3-col" style="width: 50%">
+          <%= f.text_field :name, class: 'contact-text-field-name', placeholder: "Name" %>
+          </div>
+          <div class="w3-col" style="width: 50%">
+          <%= f.text_field :email, class: 'contact-text-field-email', placeholder: "Email" %>
+          </div>
+
+        </div>
+        <div class="form-group">
+          <%= f.text_area :comments, class: 'contact-text-area', placeholder: "Message" %>
+        </div>
+        <%= f.submit 'Submit', class: 'invert-button' %>
+      <% end %>
+    </div>
+    <br>
+</div>

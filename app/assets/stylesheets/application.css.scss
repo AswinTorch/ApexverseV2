@@ -1,0 +1,332 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require social-share-button
+ *= require_tree .
+ *= require_self
+ */
+ @import "social-share-button";
+ @import 'bootstrap-sprockets';
+ @import 'bootstrap';
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
+
+ // OVERALL THEME AND FONTS
+ // Headings Font
+ h1, h2{
+   font-family: 'Questrial', sans-serif;
+ }
+
+ // NAVBAR
+ // Navbar Overall Look
+ .navbar {
+   background: #FFFFFF;
+   border:none;
+   margin-bottom: 0px;
+   padding-bottom: -10px;
+
+ }
+ // Hamburger Menu for Mobile
+ .navbar-default {
+   .navbar-toggle{
+   border:none;
+     &:hover, &:focus {
+       background-color:#f9f9f9;
+     }
+   }
+   // Bolded "Logo" Text
+   .navbar-brand {
+     padding-top: 15px;
+     padding-left: 35px;
+     font-weight: bold;
+     font-size: 150%;
+     font-family: 'Questrial', sans-serif;
+     color:black;
+     border:none;
+     &:hover {
+       color: gray;
+       background:white;
+     }
+   }
+ }
+
+ // Navbar Hover Tabs
+ .navbar-default .navbar-nav > li > a {
+   font-size: 150%;
+   font-family: 'Questrial', sans-serif;
+   color:black;
+   border:none;
+   &:hover {
+     color: gray;
+   }
+ }
+ // Navbar Spacing Right
+ .navbar-right{
+   margin-right: 10px;
+ }
+ // Hamburger Menu Collapse Styling
+ .navbar-default .navbar-collapse, .navbar-default .navbar-form{
+   border-top: none;
+   border-bottom: 20px;
+   border-color: none;
+  }
+ // Active Tab
+ .navbar-default .navbar-nav > .active{
+   color: #000;
+   background: #F1F1F1;
+   a {
+     border-bottom:3px solid black;
+     background:white;
+     &:hover {
+       border-bottom:3px solid black;
+       background:white;
+     }
+   }
+  }
+
+
+ //HOME PAGE LAYOUT
+ header {
+   text-align: center;
+   background: white;
+   color: white;
+ }
+ header .container {
+   padding-top: 100px;
+   padding-bottom: 50px;
+ }
+ header img {
+   display: block;
+   margin: 0 auto 20px;
+ }
+ header .intro-text .name {
+   display: block;
+   color:black;
+   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+   text-transform: uppercase;
+   font-weight: 700;
+   font-size: 2em;
+ }
+ header .intro-text .skills {
+   font-size: 1.25em;
+   font-weight: 300;
+ }
+ @media (min-width: 768px) {
+   header .container {
+     padding-top: 125px;
+     padding-bottom: 125px;
+   }
+   header .intro-text .name {
+     font-size: 4.75em;
+   }
+   header .intro-text .skills {
+     font-size: 1.75em;
+     color:black;
+   }
+ }
+ hr {
+   margin-top: 20px;
+   margin-bottom: 20px;
+   border: 0;
+   border-top: 1px solid black;
+ }
+ hr.star-light,
+ hr.star-primary {
+   padding: 0;
+   border: none;
+   border-top: solid 5px;
+   text-align: center;
+   max-width: 250px;
+   margin: 25px auto 30px;
+ }
+ hr.star-light:after,
+ hr.star-primary:after {
+   content: "\f005";
+   font-family: FontAwesome;
+   display: inline-block;
+   position: relative;
+   top: -0.8em;
+   font-size: 2em;
+   padding: 0 0.25em;
+ }
+ hr.star-light {
+   border-color: black;
+ }
+ hr.star-light:after {
+   background-color: white;
+   color: black;
+ }
+ hr.star-primary {
+   border-color: black;
+ }
+ hr.star-primary:after {
+   background-color: black;
+   color: black;
+ }
+ // Home Sections
+ #home-section-black {
+   background: #0F1113;
+ }
+ #home-section-white {
+   background: white;
+ }
+ #logo {
+   position: absolute;
+   margin-top: 5%;
+   width: 500px;
+   height: 500px;
+ }
+
+ h1{
+   color:black;
+   position: right;
+ }
+
+
+ // FOOTER
+ footer {
+   padding:50px 0 65px;
+ }
+
+ // POST STYLINGS
+ #post_container{
+   margin-top: 29px;
+   border: 50px;
+ }
+ #post_info {
+   font-size: 20px;
+ }
+ #post_content {
+   font-family: 'Raleway', sans-serif;
+   line-height: 1.5;
+   margin: 30px 0;
+   font-size: 20px;
+ }
+ #post_comments{
+   padding: 0;
+ }
+
+ $size: 30px;
+
+ .social-share-button {
+   .ssb-icon {
+     background-size: $size $size;
+     height: $size;
+     width: $size;
+     border: 0px;
+   }
+ }
+
+ #post_name{
+   font-size: 100%;
+   color: grey;
+ }
+
+
+ // TRANSITIONS
+ // Black Buttons
+ .w3-button, .w3-black, .w3-padding-large{
+   &:hover {
+     background-color: #2C2C2C;
+     transition: all 0.3s ease 0s;
+     box-shadow: inset 0 0 0 5px #2C2C2C;
+   }
+ }
+
+ // MISCALLANEOUS
+ // Link Styling
+ a {
+ 	text-decoration: none;
+ 	color: inherit;
+ }
+ // Buttons
+ .invert-button {
+   font-weight: 400;
+   color: black;
+   outline: none;
+   border: 1px solid black;
+   font-size: 1em;
+   padding: 0.6em 3em;
+   background: transparent;
+   transition: 0.5s all;
+   -webkit-transition: 0.5s all;
+   &:hover {
+     border: 1px solid #111111;
+     background: #111111;
+     color: #fff;
+   }
+ }
+ .invert-button a:link, .invert-button a:visited, .invert-button a:hover, .invert-button a:active,  {
+     text-decoration:none;
+ }
+ // Forms
+
+
+
+ .contact-text-field-name {
+   width: 100%;
+   font-size: 1em;
+   margin-bottom: 2em;
+   color: rgb(194, 193, 203);
+   font-weight: 400;
+   font-family: Lato, sans-serif;
+   padding: 10px;
+   border-width: 1px;
+   border-style: solid;
+   border-color: rgb(226, 224, 237);
+   border-image: initial;
+   background: rgb(255, 255, 255);
+   outline: none;
+   transition: all 0.5s ease;
+   &:hover{
+     border: 1px solid black;
+   }
+ }
+ .contact-text-field-email {
+   width: 100%;
+   font-size: 1em;
+   margin-bottom: 2em;
+   color: rgb(194, 193, 203);
+   font-weight: 400;
+   font-family: Lato, sans-serif;
+   padding: 10px;
+   border-width: 1px;
+   border-style: solid;
+   border-color: rgb(226, 224, 237);
+   border-image: initial;
+   background: rgb(255, 255, 255);
+   outline: none;
+   transition: all 0.5s ease;
+   &:hover{
+     border: 1px solid black;
+   }
+ }
+ .contact-text-area {
+   resize: none;
+   height: 200px;
+   width: 100%;
+   margin-right: 0%;
+   padding: 12px;
+   border: 1px solid #E2E0ED;
+   font-size: 1em;
+   margin-bottom: 2em;
+   color: #C2C1CB;
+   background: #fff;
+   outline: none;
+   font-weight: 400;
+   font-family: 'Lato', sans-serif;
+   transition: 0.5s all ease;
+   -webkit-transition: 0.5s all ease;
+   &:hover{
+     border: 1px solid black;
+   }
+ }
