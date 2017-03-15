@@ -1,9 +1,11 @@
 class ArticlesController < ApplicationController
+before_action :authenticate_user!, except: [:index, :show]
+
   def index
     if params[:tag].present?
       @articles = Article.all.tagged_with(params[:tag])
     else
-      @articles = Article.all
+      @articles = Article.all.order("created_at DESC")
     end
   end
 

@@ -45,7 +45,8 @@
             <li class="<%= 'active' if current_page?(articles_path) %>"><%= link_to "News", articles_path %></li>
             <li class="<%= 'active' if current_page?(about_path) %>"><%= link_to "About", about_path %></li>
             <li class="<%= 'active' if current_page?(new_contact_path) %>"><%= link_to "Contact Us", new_contact_path %></li>
-            <li class="<%= 'active' if current_page?(new_article_path) %>"><%= link_to 'New Post', new_article_path %></li>
+            <% if user_signed_in? %><li class="<%= 'active' if current_page?(new_article_path) %>"><%= link_to 'New Post', new_article_path %></li><% end %>
+            <% if user_signed_in? %><li class="<%= 'active' if current_page?(destroy_user_session_path) %>"><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li><% end %>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div>
@@ -91,7 +92,7 @@
                     </span>
                   </a>
               </li>
-            <p class="copyright text-muted text-align:center">Copyright <%= link_to "\u00A9", root_path %> ApexVerse 2017</p>
+            <p class="copyright text-muted text-align:center">Copyright <%= link_to "\u00A9", new_user_session_path %> ApexVerse 2017</p>
           </ul>
         </div>
     </footer>
