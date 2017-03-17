@@ -10,7 +10,7 @@
       <img src="<%= article.banner_image_url %>" alt="" style="width:100%" >
       <div class="w3-container w3-padding-8">
         <h1 id="article-title"><b><%= article.title %></b></h1>
-        <h5 id="article-info"><%= article.name %> , <span class="w3-opacity"><%= article.created_at.strftime("%B %d %Y") %></span></h5>
+        <h5 id="article-info"><%= article.name %> , <span class="w3-opacity"><%= time_ago_in_words(article.created_at) %> ago</span></h5>
       </div>
 
       <div class="w3-container">
