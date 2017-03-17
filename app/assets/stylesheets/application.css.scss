@@ -197,39 +197,23 @@
    padding:50px 0 65px;
  }
 
- // POST STYLINGS
- #post_container{
-   margin-top: 29px;
-   border: 50px;
- }
- #post_info {
-   font-size: 20px;
- }
- #post_content {
-   font-family: 'Raleway', sans-serif;
-   line-height: 1.5;
-   margin: 30px 0;
-   font-size: 20px;
- }
- #post_comments{
-   padding: 0;
- }
+ // BLOG STYLINGS
+#article-title, #post-title {
+  font-size: 46px;
+}
+#article-info, #post-info {
+  font-size: 16px;
+}
+#article-content, #post-content {
+  font-size: 20px;
+}
+#article-content-container, #post-content-container {
+  text-align: justify;
+  text-justify: inter-word;
+}
 
- $size: 30px;
 
- .social-share-button {
-   .ssb-icon {
-     background-size: $size $size;
-     height: $size;
-     width: $size;
-     border: 0px;
-   }
- }
 
- #post_name{
-   font-size: 100%;
-   color: grey;
- }
 
  // MISCALLANEOUS
  // Link Styling
