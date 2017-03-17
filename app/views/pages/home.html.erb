@@ -31,55 +31,60 @@
           <span class="w3-xlarge w3-border-dark-grey w3-padding-16">About Us</span>
         </div>
 
-        <div class="w3-quarter w3-margin-bottom">
+        <div class="w3-third w3-margin-bottom">
           <div class="w3-card-4">
             <img src="https://naij-ask.gencdn.com/questions/25305-548faf-24609260915-a840b027e5-o-500x333.jpg" alt="Aswin" style="width:100%">
             <div class="w3-container">
               <h3>Aswin Nair</h3>
               <p class="w3-opacity">Cofounder</p>
               <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-              <p><button class="invert-button">Contact</button></p>
+              <p ><%= link_to "Contact", new_contact_path, class: "invert-button" %></p>
             </div>
           </div>
         </div>
 
-        <div class="w3-quarter w3-margin-bottom">
+        <div class="w3-third w3-margin-bottom">
           <div class="w3-card-4">
             <img src="http://rainbirdphotography.com/wp-content/uploads/2016/11/Gibson_steps_1-cover-500x333.jpg" alt="Lakshay" style="width:100%">
             <div class="w3-container">
               <h3>Lakshay Mehandru</h3>
               <p class="w3-opacity">Cofounder</p>
               <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-              <p><button class="invert-button">Contact</button></p>
+              <p ><%= link_to "Contact", new_contact_path, class: "invert-button" %></p>
             </div>
           </div>
         </div>
 
-        <div class="w3-rest w3-margin-bottom">
-          <div class="container">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id lectus ac est laoreet eleifend. Morbi euismod, dolor sed aliquam tincidunt, nisl eros tincidunt sem, et interdum erat sem imperdiet lorem. Donec ac enim iaculis, porta nulla non, ultricies nunc. Vivamus imperdiet nunc leo, vel auctor sapien rutrum eu. Curabitur in ex vitae tellus placerat lobortis. Aliquam erat volutpat. Etiam sodales lorem augue, sed ullamcorper justo cursus vitae. Sed rutrum eget elit eget pretium.
-            </p>
+        <div class="w3-third w3-margin-bottom">
+          <div class="w3-card-4">
+            <img src="https://naij-ask.gencdn.com/questions/25305-548faf-24609260915-a840b027e5-o-500x333.jpg" alt="Aswin" style="width:100%">
+            <div class="w3-container">
+              <h3>Rohan Patel</h3>
+              <p class="w3-opacity">Writer</p>
+              <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+              <p ><%= link_to "Contact", new_contact_path, class: "invert-button" %></p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Subscribe -->
-      <div class="w3-white w3-margin">
-        <div class="w3-container w3-white">
-          <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail to get notified on the latest blog posts." style="width:100%"></p>
-          <p><button type="button" onclick="document.getElementById('subscribe').style.display='block'" class="w3-button w3-block w3-black w3-hover-white">Subscribe</button></p>
-        </div>
-      </div>
-
-      <!-- Subscribe Modal -->
-      <div id="subscribe" class="w3-modal w3-animate-opacity">
-        <div class="w3-modal-content w3-padding-jumbo">
+        <!-- Subscribe -->
+        <div class="w3-white w3-margin">
           <div class="w3-container w3-white">
-            <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-transparent w3-button w3-xlarge w3-right"></i>
-            <h2 class="w3-wide">SUBSCRIBE</h2>
-            <p>Join the mailing list to receive updates on the latest blog posts and other things.</p>
-            <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
-            <button type="button" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">Subscribe</button>
+            <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail to get notified on the latest blog posts." style="width:100%"></p>
+            <p><button type="button" onclick="document.getElementById('subscribe').style.display='block'" class="w3-button w3-block w3-black w3-hover-white">Subscribe</button></p>
+          </div>
+        </div>
+
+        <!-- Subscribe Modal -->
+        <div id="subscribe" class="w3-modal w3-animate-opacity">
+          <div class="w3-modal-content w3-padding-jumbo">
+            <div class="w3-container w3-white">
+              <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-transparent w3-button w3-xlarge w3-right"></i>
+              <h2 class="w3-wide">SUBSCRIBE</h2>
+              <p>Join the mailing list to receive updates on the latest blog posts and other things.</p>
+              <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+              <button type="button" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">Subscribe</button>
+            </div>
           </div>
         </div>
       </div>
