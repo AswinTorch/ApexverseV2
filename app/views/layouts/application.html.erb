@@ -44,6 +44,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li class="<%= 'active' if current_page?(articles_path) %>"><%= link_to "News", articles_path %></li>
             <li class="<%= 'active' if current_page?(posts_path) %>"><%= link_to "Media", posts_path %></li>
+            <li class="<%= 'active' if current_page?(store_path) %>"><%= link_to "Store", store_path %></li>
             <li class="<%= 'active' if current_page?(new_contact_path) %>"><%= link_to "Contact Us", new_contact_path %></li>
             <% if user_signed_in? %><li class="<%= 'active' if current_page?(new_article_path) %>"><%= link_to 'New Article', new_article_path %></li><% end %>
             <% if user_signed_in? %><li class="<%= 'active' if current_page?(new_post_path) %>"><%= link_to 'New Post', new_post_path %></li><% end %>
@@ -62,7 +63,7 @@
 
     <!-- Footer -->
     <footer class="w3-container w3-padding-32 w3-light-grey w3-center">
-      <a href="#" class="w3-button w3-black w3-margin w3-hover-white"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+      <a href="#" class="w3-btn w3-black w3-hover-white"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
       <div class="w3-xlarge w3-section">
         <a href="https://www.facebook.com/ApexVerse" class="fa fa-facebook-official w3-hover-text-indigo" style="text-decoration:none"></a>
         <a href="https://twitter.com/ApexVerse" class="fa fa-twitter w3-hover-text-light-blue" style="text-decoration:none"></a>
