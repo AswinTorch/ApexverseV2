@@ -38,7 +38,7 @@
               <h3>Aswin Nair</h3>
               <p class="w3-opacity">Cofounder</p>
               <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-              <p ><%= link_to "Contact", new_contact_path, class: "invert-button" %></p>
+              <%= button_to "Contact", new_contact_path, class: 'invert-button', :method => "get" %><br>
             </div>
           </div>
         </div>
@@ -50,7 +50,7 @@
               <h3>Lakshay Mehandru</h3>
               <p class="w3-opacity">Cofounder</p>
               <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-              <p ><%= link_to "Contact", new_contact_path, class: "invert-button" %></p>
+              <%= button_to "Contact", new_contact_path, class: 'invert-button', :method => "get" %><br>
             </div>
           </div>
         </div>
@@ -62,17 +62,15 @@
               <h3>Rohan Patel</h3>
               <p class="w3-opacity">Writer</p>
               <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-              <p ><%= link_to "Contact", new_contact_path, class: "invert-button" %></p>
+              <%= button_to "Contact", new_contact_path, class: 'invert-button', :method => "get" %><br>
             </div>
           </div>
         </div>
 
         <!-- Subscribe -->
         <div class="w3-white w3-margin">
-          <div class="w3-container w3-white">
-            <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail to get notified on the latest blog posts." style="width:100%"></p>
-            <p><button type="button" onclick="document.getElementById('subscribe').style.display='block'" class="w3-button w3-block w3-black w3-hover-white">Subscribe</button></p>
-          </div>
+          <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail to get notified on the latest blog posts." style="width:100%"></p>
+          <p><button type="button" onclick="document.getElementById('subscribe').style.display='block'" class="invert-button w3-block">Subscribe</button></p>
         </div>
 
         <!-- Subscribe Modal -->
@@ -82,8 +80,8 @@
               <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-transparent w3-button w3-xlarge w3-right"></i>
               <h2 class="w3-wide">SUBSCRIBE</h2>
               <p>Join the mailing list to receive updates on the latest blog posts and other things.</p>
-              <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
-              <button type="button" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">Subscribe</button>
+              <p><input class="contact-text-field-email" type="text" placeholder="Enter e-mail"></p>
+              <button type="button" class="invert-button" onclick="document.getElementById('subscribe').style.display='none'">Subscribe</button>
             </div>
           </div>
         </div>
