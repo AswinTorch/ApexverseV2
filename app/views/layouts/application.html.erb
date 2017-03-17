@@ -64,38 +64,15 @@
     <!--Main Content-->
     <%= yield %>
 
-
-     <!--Footer -->
-    <footer class = "w3-light-grey">
-        <div class="container text-center">
-            <ul class="list-inline">
-              <li>
-                <a href="https://twitter.com/ApexVerse" target= "_blank">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.facebook.com/ApexVerse-1664390790528809/" target= "_blank">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-                  <a href="https://www.instagram.com/ApexVerse/" target=_blank>
-                    <span class="fa-stack fa-lg">
-                      <i class="fa fa-circle fa-stack-2x"></i>
-                      <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-                    </span>
-                  </a>
-              </li>
-            <p class="copyright text-muted text-align:center">Copyright <%= link_to "\u00A9", new_user_session_path %> ApexVerse 2017</p>
-          </ul>
-        </div>
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-32 w3-light-grey w3-center">
+      <a href="#" class="w3-button w3-black w3-margin w3-hover-white"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+      <div class="w3-xlarge w3-section">
+        <a href="https://www.facebook.com/ApexVerse" class="fa fa-facebook-official w3-hover-text-indigo" style="text-decoration:none"></a>
+        <a href="https://twitter.com/ApexVerse" class="fa fa-twitter w3-hover-text-light-blue" style="text-decoration:none"></a>
+        <a href="https://www.instagram.com/ApexVerse/" class="fa fa-instagram w3-hover-text-purple" style="text-decoration:none"></a>
+      </div>
+      <p>Copyright <%= link_to "\u00A9", new_user_session_path, class: "w3-hover-text-green"%> ApexVerse 2017</p>
     </footer>
 
   </body>
