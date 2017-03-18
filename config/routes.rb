@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   resources :articles
   resources :posts
   resources :quarks
+  resources :leptons
+  resources :protons
 end

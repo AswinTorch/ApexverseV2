@@ -1,0 +1,38 @@
+<%= form_tag protons_path do %>
+  <div class="w3-container w3-padding-32 w3-center" id="website-pricing">
+    <article>
+      <% if flash[:error].present? %>
+        <div id="error_explanation">
+          <p><%= flash[:error] %></p>
+        </div>
+      <% end %>
+    </article>
+    <div class="container" style="max-width:1400px">
+      <div class="w3-row-padding">
+        <div class="w3-section" id="website-proton">
+          <ul class="w3-ul w3-white w3-hover-shadow">
+            <li class="w3-black w3-xlarge w3-padding-32">Proton</li>
+            <li class="w3-padding-16">10 Page Custom Website</li>
+            <li class="w3-padding-16">Mobile Responsive</li>
+            <li class="w3-padding-16">Google Analytic Integration</li>
+            <li class="w3-padding-16">Ad Revenue Consulting</li>
+            <li class="w3-padding-16">Hosting Set-up</li>
+            <li class="w3-padding-16">Domain name</li>
+            <li class="w3-padding-16">100% Satisfaction Guaranteed</li>
+            <li class="w3-padding-16"><b>Free</b> 1 year Maintenance</li>
+            <li class="w3-padding-16">
+              <h2 ><strike>$1499</strike><b> $999 </b></h2>
+            </li>
+            <li class="w3-light-grey w3-padding-32">
+              <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                      data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                      data-description="The Proton Package"
+                      data-amount="99900"
+                      data-locale="auto"></script>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
