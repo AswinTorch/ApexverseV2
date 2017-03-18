@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get 'contact-us', to: 'contacts#new', as: 'new_contact'
   resources :articles
   resources :posts
+  resources :quarks
 end
